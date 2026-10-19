@@ -1,7 +1,7 @@
 {
   "name": "@sweetvaluelab/sec",
-  "version": "0.1.0",
-  "description": "SEC EDGAR clients and parsers for TypeScript: XBRL financials, 13F holdings, 13D/13G, 8-K, Form 4 and CUSIP → ticker. No API key, one dependency.",
+  "version": "0.1.1",
+  "description": "Read SEC EDGAR from TypeScript: XBRL financial statements, 13F holdings and changes, insider trades (Form 4), 8-K, 13D/13G, CUSIP → ticker. No API key, one dependency. Powers sweetvaluelab.com.",
   "keywords": [
     "sec",
     "edgar",
