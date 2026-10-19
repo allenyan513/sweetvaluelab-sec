@@ -1,0 +1,67 @@
+{
+  "name": "@sweetvaluelab/sec",
+  "version": "0.1.0",
+  "description": "SEC EDGAR clients and parsers for TypeScript: XBRL financials, 13F holdings, 13D/13G, 8-K, Form 4 and CUSIP → ticker. No API key, one dependency.",
+  "keywords": [
+    "sec",
+    "edgar",
+    "xbrl",
+    "13f",
+    "13d",
+    "13g",
+    "8-k",
+    "form-4",
+    "insider-trading",
+    "companyfacts",
+    "financial-statements",
+    "openfigi",
+    "cusip"
+  ],
+  "homepage": "https://sweetvaluelab.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allenyan513/sweetvaluelab-sec.git"
+  },
+  "bugs": "https://github.com/allenyan513/sweetvaluelab-sec/issues",
+  "license": "MIT",
+  "author": "SweetValueLab (https://sweetvaluelab.com)",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      "./*": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.js"
+      },
+      "./package.json": "./package.json"
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepack": "rm -rf dist && tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.20",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.7"
+  }
+}
